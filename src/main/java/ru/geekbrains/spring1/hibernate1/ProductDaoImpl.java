@@ -37,7 +37,8 @@ public class ProductDaoImpl implements ProductDao{
             session.beginTransaction();
             Product product = session.get(Product.class, id);
             session.delete(product);
-           // session.createQuery("delete from Product p where p.id = :id");
+            session.createQuery("delete from Product p where p.id = :id");
+            session.createQuery("delete from Product  where id = :id");
             session.getTransaction().commit();
         }
     }

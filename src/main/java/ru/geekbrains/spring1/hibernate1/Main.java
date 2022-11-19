@@ -15,6 +15,8 @@ public class Main {
 
         productDao.saveOrUpdate(new Product(1l, "dfas", 587));
 
+        productDao.deleteById(1l);
+
         List<Product> productList = productDao.findAll();
         System.out.println(productList);
 
